@@ -1,0 +1,14 @@
+# Ignore C++ build files
+*.out
+*.o
+
+# Ignore macOS system files
+.DS_Store
+._*
+
+# Ignore Visual Studio Code folder
+.vscode/
+
+# Ignore temporary and backup files
+*.swp
+*.tmp
