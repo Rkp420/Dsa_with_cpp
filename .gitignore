@@ -12,3 +12,8 @@
 # Ignore temporary and backup files
 *.swp
 *.tmp
+
+# Or, to ignore all files without extensions:
+.*
+
+!*/ # Exclude directories (prevent directory exclusion)
