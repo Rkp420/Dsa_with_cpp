@@ -9,7 +9,7 @@ using namespace std;
 string getCurrentDate()
 {
     time_t t = time(0);
-    struct tm *now = localtime(&t);
+    tm *now = localtime(&t);
     return to_string(now->tm_year + 1900) + "-" + to_string(now->tm_mon + 1) + "-" + to_string(now->tm_mday);
 }
 
@@ -67,13 +67,13 @@ int daysBetween(const string &startDate, const string &endDate)
     ssEnd >> endYear >> delimiter >> endMonth >> delimiter >> endDay;
 
     // Convert both dates to days since epoch (1970-01-01)
-    struct tm start_tm = {0};
+    tm start_tm = {0};
     start_tm.tm_year = startYear - 1900;
     start_tm.tm_mon = startMonth - 1;
     start_tm.tm_mday = startDay;
     time_t startTime = mktime(&start_tm);
 
-    struct tm end_tm = {0};
+    tm end_tm = {0};
     end_tm.tm_year = endYear - 1900;
     end_tm.tm_mon = endMonth - 1;
     end_tm.tm_mday = endDay;
