@@ -13,7 +13,6 @@
 *.swp
 *.tmp
 
-# Or, to ignore all files without extensions:
-.*
 
-!*/ # Exclude directories (prevent directory exclusion)
+# Ignore all files without extensions
+*.
